@@ -1,0 +1,15 @@
+LABEL com.github.containers.toolbox="true" \
+      usage="Versão pronta do projeto adv-br para uso com distrobox" \
+      summary="Versão do adv-br (https://github.com/pedrohqb/distrobox-adv-br/) em formato imagem para uso com distrobox" \
+      maintainer="faeizmahrus@outlook.com"
+
+# Copy the setup scripts and package list
+COPY ../scripts/debian.sh /
+COPY ../scripts/distrobox-shims.sh /
+COPY ../packages/debian.packages /
+
+# Run the setup scripts
+RUN chmod +x debian.sh distrobox-shims.sh && /debian.sh
+RUN rm /debian.sh /distrobox-shims.sh /debian.packages
+
+
