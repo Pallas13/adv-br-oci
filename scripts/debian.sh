@@ -7,30 +7,38 @@
 sudo apt update
 sudo apt upgrade
 sudo apt install curl
+sudo apt install $(cat ./debian.packages | tr "\n" " ")
+
 
 # Instalar Adv-Br
 ## INSTALAR PACOTES ADICIONAIS ##
 # Instalar Safesign
-curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_safesign.sh | sh
-
+wget https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_safesign.sh
 # Instalar SafeNet
-curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_safenet.sh | sh
-
+wget https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_safenet.sh
 # Instalar Java (Zulu)
-curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_java.sh | sh
-
+wget https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_java.sh
 # Instalar PJeOffice
-curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_pjeoffice.sh | sh
-
+wget https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_pjeoffice.sh 
 # Instalar Lacuna Webpki
-curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_webpki.sh | sh
-
+wget https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_webpki.sh 
 # Instalar Softplan Websigner
-curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_websigner.sh | sh
-
+wget https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_websigner.sh 
 # Instalar PJeCalc
-curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_pjecalc.sh | sh
-
+wget https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_pjecalc.sh 
 # Configurar tokens no Firefox
-curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_tokens_firefox.sh | sh
+wget https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_tokens_firefox.sh 
 
+chmod +x instalar_*.sh
+chmod +x configurar_tokens_firefox.sh
+./instalar_safesign.sh
+./instalar_safenet.sh
+./instalar_java.sh
+./instalar_pjeoffice.sh 
+./instalar_webpki.sh 
+./instalar_websigner.sh
+./instalar_pjecalc.sh
+./configurar_tokens_firefox.sh 
+
+rm instalar*.sh
+rm configurar_tokens_firefox.sh 
