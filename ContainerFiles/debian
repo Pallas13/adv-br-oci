@@ -1,3 +1,4 @@
+FROM docker.io/library/debian:trix
 LABEL com.github.containers.toolbox="true" \
       usage="Versão pronta do projeto adv-br para uso com distrobox" \
       summary="Versão do adv-br (https://github.com/pedrohqb/distrobox-adv-br/) em formato imagem para uso com distrobox" \
