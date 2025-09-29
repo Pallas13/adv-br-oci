@@ -6,8 +6,8 @@
 # Update the container and install packages
 sudo apt update
 sudo apt upgrade
-sudo apt install curl
-sudo apt install $(cat ./debian.packages | tr "\n" " ")
+sudo apt install curl -y
+sudo apt install $(cat ./debian.packages | tr "\n" " ") -y
 
 
 # Instalar Adv-Br
