@@ -4,10 +4,10 @@
 ./distrobox-shims.sh
 
 # Update the container and install packages
-sudo apt update
-sudo apt upgrade
-sudo apt install curl -y
-sudo apt install $(cat ./adv-br.packages | tr "\n" " ") -y
+apt update
+apt upgrade
+apt install curl sudo -y
+apt install $(cat ./adv-br.packages | tr "\n" " ") -y
 
 curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/instalar_safesign.sh | sh 
 curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/instalar_safenet.sh | sh 
