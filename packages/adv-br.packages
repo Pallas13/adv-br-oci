@@ -3,3 +3,4 @@ software-properties-common
 gvfs
 sudo
 wget
+unzip
