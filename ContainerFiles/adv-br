@@ -1,0 +1,16 @@
+FROM docker.io/library/ubuntu:24.04
+LABEL com.github.containers.toolbox="true" \
+      usage="Versão pronta do projeto adv-br para uso com distrobox" \
+      summary="Versão do adv-br (https://github.com/pedrohqb/distrobox-adv-br/) em formato imagem para uso com distrobox e docker" \
+      maintainer="edsondasilvaguedes0@gmail.com"
+
+# Copy the setup scripts and package list
+COPY ../scripts/adv-br.sh /
+COPY ../scripts/distrobox-shims.sh /
+COPY ../packages/adv-br.packages /
+
+# Run the setup scripts
+RUN chmod +x adv-br.sh distrobox-shims.sh && /adv-br.sh
+RUN rm /adv-br.sh /distrobox-shims.sh /adv-br.packages
+
+
