@@ -6,7 +6,7 @@
 # Update the container and install packages
 apt update
 apt upgrade
-apt install curl sudo -y
+apt install curl sudo wget -y
 apt install $(cat ./adv-br.packages | tr "\n" " ") -y
 
 curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/instalar_safesign.sh | sh 
@@ -19,5 +19,5 @@ curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main
 curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/instalar_websigner.sh | sh 
 curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/instalar_certisign.sh | sh 
 curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/scripts-ubuntu-24-04/instalar-firefox.sh | sh 
-curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/scripts-ubuntu-24-04/configurar_tokens_firefox.sh | sudo -u $USER sh
+curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/scripts-ubuntu-24-04/configurar_tokens_firefox.sh | sh
 
