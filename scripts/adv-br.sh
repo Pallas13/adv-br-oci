@@ -19,5 +19,5 @@ curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main
 curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/instalar_websigner.sh | sh 
 curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/instalar_certisign.sh | sh 
 curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/scripts-ubuntu-24-04/instalar-firefox.sh | sh 
-curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/scripts-ubuntu-24-04/configurar_tokens_firefox.sh | sh
+#curl https://raw.githubusercontent.com/Pallas13/distrobox-adv-br/refs/heads/main/scripts/scripts-ubuntu-24-04/configurar_tokens_firefox.sh | sh
 
