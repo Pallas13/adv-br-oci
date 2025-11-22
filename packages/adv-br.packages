@@ -4,3 +4,5 @@ gvfs
 sudo
 wget
 unzip
+libegl-dev 
+libpci-dev
