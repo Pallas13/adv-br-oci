@@ -6,3 +6,7 @@ wget
 unzip
 libegl-dev 
 libpci-dev
+firefox-esr 
+firefox-esr-l10n-pt-br 
+chromium 
+chromium-l10n

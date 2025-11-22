@@ -1,4 +1,4 @@
-FROM docker.io/library/ubuntu:24.04
+FROM docker.io/library/debian:trixie
 LABEL com.github.containers.toolbox="true" \
       usage="Versão pronta do projeto adv-br para uso com distrobox" \
       summary="Versão do adv-br (https://github.com/pedrohqb/distrobox-adv-br/) em formato imagem para uso com distrobox e docker" \
